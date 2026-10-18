@@ -1,0 +1,24 @@
+/* HTML provides the structure. CSS changes how it looks. */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* # targets one element by its ID. */
+#profile-name {
+  color: navy;
+}
+
+/* . targets every element with this class. */
+.bio {
+  font-style: italic;
+  color: gray;
+}
+
+.btn-primary {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
