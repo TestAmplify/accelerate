@@ -5,3 +5,6 @@ playwright-report/
 .env
 .env.*
 !.env.example
+
+# Local teaching and maintenance notes
+/instructor/

@@ -35,4 +35,3 @@ Some recordings show earlier course numbers or filenames, such as
 Day 16–21 schedule. Use the filenames and commands written in this repository.
 
 [Help with copying, saving, and running](START-HERE.md#something-did-not-work)
-· [Instructor notes and checks](instructor/README.md)
