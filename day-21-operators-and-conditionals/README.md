@@ -108,4 +108,6 @@ topics are split into five files with all required variables included.
 Use the spellings in these files (`testUser123`, `correctPass`, and `passed`):
 JavaScript text comparisons are case-sensitive.
 
-[Copying and running help](../START-HERE.md) · [All lessons](../README.md)
+[Copying and running help](../START-HERE.md)
+· [Next: Day 22](../day-22-loops-and-functions/)
+· [All lessons](../README.md)

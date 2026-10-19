@@ -16,6 +16,8 @@ Click your day. Read its instructions, then open the file you need.
 | [Day 19](day-19-html-and-css/) | HTML & CSS | A profile page: `index.html` and `style.css` |
 | [Day 20](day-20-variables/) | Variables & Data Types | Three small JavaScript files |
 | [Day 21](day-21-operators-and-conditionals/) | Operators & Conditionals | Five small JavaScript files |
+| [Day 22](day-22-loops-and-functions/) | Loops & Functions | Six examples: repeat actions, reuse logic, and return results |
+| [Day 23](day-23-arrays-and-objects/) | Arrays & Objects | Six examples: lists, named properties, and nested test data |
 
 **First quick example:** [Day 20 · 01-test-data.js](day-20-variables/01-test-data.js).
 
@@ -31,7 +33,9 @@ You do not need to clone, fork, or push anything to use an example.
 Save your changes in your own practice folder.
 
 Some recordings show earlier course numbers or filenames, such as
-`day5-variables.js` and `day6-operators.js`. Here, the folders follow the current
-Day 16–21 schedule. Use the filenames and commands written in this repository.
+`day5-variables.js`, `day6-operators.js`, `day7-loops-functions.js`, and
+`day8-arrays-objects.js`. Here, the folders follow the current Day 16–23 schedule.
+The combined JavaScript demonstrations are split into small, independent files.
+Use the filenames and commands written in this repository.
 
 [Help with copying, saving, and running](START-HERE.md#something-did-not-work)
