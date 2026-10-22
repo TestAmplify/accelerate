@@ -215,5 +215,6 @@ The `push` example formats its output with `join` so it is easy to compare
 before and after. The same items are added as in the demonstration.
 
 [Previous: Day 22](../day-22-loops-and-functions/)
+· [Next: Day 24](../day-24-dom-manipulation/)
 · [Copying and running help](../START-HERE.md)
 · [All lessons](../README.md)

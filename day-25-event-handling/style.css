@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background: #faf5ef;
+  color: #2b1b24;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.lesson-label {
+  color: #552542;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+button {
+  font: inherit;
+  padding: 10px 20px;
+  margin: 5px 5px 5px 0;
+  cursor: pointer;
+}
+
+.event-box {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  text-align: left;
+}
+
+.event-box:hover {
+  background-color: #f0f0f0;
+  border-color: #007bff;
+}
+
+.event-box.clicked {
+  background-color: #d4edda;
+  border-color: #28a745;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+#event-log {
+  background: #f8f9fa;
+  padding: 15px;
+  min-height: 30px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+.hint {
+  font-size: 0.9rem;
+}

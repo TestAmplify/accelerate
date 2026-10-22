@@ -58,12 +58,18 @@ command again. Your new username should appear in the output.
 
 ## Use the other lessons
 
-Follow the instructions in each day's folder. Each JavaScript file is a
-separate example: create a separate file with the same name and run it.
-**Do not paste all the examples into one file.**
+Follow the instructions in each day's folder. For Days 20–23, each JavaScript
+file is a separate Node.js example: create a separate file with the same name
+and run it. **Do not paste all the examples into one file.**
 
 For Day 19, create `index.html` and `style.css` in the same folder. Open
 `index.html` in your browser; do not run HTML or CSS with `node`.
+
+For Days 24 and 25, copy **all three files for that day** into one folder:
+the HTML, `style.css`, and the named JavaScript file. Open `dom.html` for
+Day 24 or `events.html` for Day 25 in your browser. Their JavaScript uses the
+browser's `document`; running it with `node` will not work. Keep the two days
+in separate folders because each has its own `style.css`.
 
 For Day 16, follow the Playwright setup in that day's instructions.
 A `.spec.js` Playwright test runs with `npx playwright test`, not `node`.
@@ -78,7 +84,9 @@ A `.spec.js` Playwright test runs with `npx playwright test`, not `node`.
 | The output has not changed | Save the file, then run the command again. |
 | SyntaxError or invalid character | Copy the entire raw code file again. Keep ordinary straight quotes and all brackets. |
 | `Identifier ... has already been declared` | Start a new file for each example; do not combine them. |
-| The webpage has no styling | Put `style.css` next to `index.html`, save both, and refresh the browser. |
+| The webpage has no styling | Put `style.css` next to that lesson's HTML file, save both, and refresh the browser. |
+| `document is not defined` | For Days 24–25, open the HTML file in your browser instead of running the JavaScript with Node.js. |
+| Day 24 or 25 buttons do nothing | Keep all three lesson files together. Check that the HTML's `script src` matches the JavaScript filename exactly. Open the browser's Console to read any error. |
 | `TypeError: Assignment to constant variable` | If you tried the Day 20 const exercise, put the `//` back on the reassignment line and save. |
 
 **Want all the files?** On the repository home page click **Code → Download ZIP**,

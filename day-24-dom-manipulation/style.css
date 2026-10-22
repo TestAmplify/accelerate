@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background: #faf5ef;
+  color: #2b1b24;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.lesson-label {
+  color: #552542;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+button {
+  font: inherit;
+  padding: 10px 20px;
+  margin: 5px 5px 5px 0;
+  cursor: pointer;
+}
+
+.highlight {
+  background-color: #ffeb3b;
+}
+
+.hidden {
+  display: none;
+}
+
+.hint {
+  font-size: 0.9rem;
+}
