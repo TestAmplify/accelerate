@@ -179,5 +179,6 @@ References: [MDN · dispatchEvent](https://developer.mozilla.org/en-US/docs/Web/
 · [Playwright · Actions](https://playwright.dev/docs/input).
 
 [Previous: Day 24](../day-24-dom-manipulation/)
+· [Next: Day 26](../day-26-es6-features/)
 · [Copying and running help](../START-HERE.md)
 · [All lessons](../README.md)

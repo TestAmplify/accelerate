@@ -58,7 +58,7 @@ command again. Your new username should appear in the output.
 
 ## Use the other lessons
 
-Follow the instructions in each day's folder. For Days 20–23, each JavaScript
+Follow the instructions in each day's folder. For Days 20–23 and Day 26, each JavaScript
 file is a separate Node.js example: create a separate file with the same name
 and run it. **Do not paste all the examples into one file.**
 
