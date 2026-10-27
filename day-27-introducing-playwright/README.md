@@ -130,6 +130,6 @@ For now, explore its Driver, Vehicle, and Coverage steps manually. Use practice
 data only. Today's two automated tests target playwright.dev.
 
 Your win: explain one test, run it, read a failure, fix the deliberate mistake,
-and rerun. Next: Day 28, locators.
+and rerun. Next: [Day 28, locators](../day-28-locators-and-selectors/).
 
 [Previous: Day 26](../day-26-es6-features/) · [All lessons](../README.md)
