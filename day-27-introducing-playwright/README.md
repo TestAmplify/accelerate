@@ -105,6 +105,16 @@ npx playwright test --project=chromium --ui
 6. In UI mode click **Run all tests** again. Both tests should pass.
 7. Close UI mode or press **Ctrl+C** in its terminal.
 
+To open UI mode in a browser tab (as on the recording Mac), use:
+
+```sh
+npx playwright test --project=chromium --ui --ui-host=127.0.0.1 --ui-port=9324
+```
+
+The extra options choose the local host and port for the same UI. They do not
+change the tests or browser project. If that port is in use, stop the earlier
+server or choose another free port.
+
 Do not weaken a real check just to make it green. Here we restore the known
 correct expectation because we intentionally changed it for practice.
 
