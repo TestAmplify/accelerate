@@ -71,7 +71,7 @@ Day 24 or `events.html` for Day 25 in your browser. Their JavaScript uses the
 browser's `document`; running it with `node` will not work. Keep the two days
 in separate folders because each has its own `style.css`.
 
-For Day 16, follow the Playwright setup in that day's instructions.
+For Days 16 and 27, follow the Playwright setup in that day's instructions.
 A `.spec.js` Playwright test runs with `npx playwright test`, not `node`.
 
 ## Something did not work

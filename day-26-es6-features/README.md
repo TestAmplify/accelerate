@@ -189,5 +189,6 @@ so you can compare it with the expected results. The default-parameter example
 uses the final `30000` ms default and the `6000` ms override shown in the lesson.
 
 [Previous: Day 25](../day-25-event-handling/)
+· [Next: Day 27](../day-27-introducing-playwright/)
 · [Copying and running help](../START-HERE.md)
 · [All lessons](../README.md)

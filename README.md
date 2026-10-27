@@ -21,6 +21,7 @@ Click your day. Read its instructions, then open the file you need.
 | [Day 24](day-24-dom-manipulation/) | DOM Manipulation | A browser page: select elements, change text, and add or hide content |
 | [Day 25](day-25-event-handling/) | Event Handling | A browser page: clicks, mouse enter/leave, reset, and simulated actions |
 | [Day 26](day-26-es6-features/) | JavaScript ES6+ Features | Six examples: arrow functions, template literals, destructuring, spread, defaults, and object shorthand |
+| [Day 27](day-27-introducing-playwright/) | Introducing Playwright | Setup, two first tests, browser commands, report, and a debugging exercise |
 
 **First quick example:** [Day 20 · 01-test-data.js](day-20-variables/01-test-data.js).
 
@@ -29,7 +30,7 @@ Click your day. Read its instructions, then open the file you need.
 - Days 20–23 and Day 26 run one JavaScript file at a time with Node.js. Each file includes its own variables.
 - Day 19 opens in your browser. Keep its HTML and CSS files together.
 - Days 24 and 25 also open in your browser. Keep each day's HTML, CSS, and JavaScript together; open its HTML file, not its JavaScript file.
-- Day 16 uses Playwright and has its own setup instructions.
+- Days 16 and 27 use Playwright and have their own setup instructions.
 - Days 17 and 18 include commands to enter in the terminal, one line at a time.
 
 You can read and copy from this public repository without a GitHub account.
@@ -38,7 +39,7 @@ Save your changes in your own practice folder.
 
 Some recordings show earlier course numbers or filenames, such as
 `day5-variables.js`, `day6-operators.js`, `day7-loops-functions.js`, and
-`day8-arrays-objects.js`. Here, the folders follow the current Day 16–26 schedule.
+`day8-arrays-objects.js`. Here, the folders follow the current Day 16–27 schedule.
 The combined Node.js demonstrations are split into small, independent files.
 The browser lessons use the current names `day24-dom-manipulation.js` and
 `day25-events.js`. Use the filenames and instructions written in this repository.
