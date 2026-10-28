@@ -75,6 +75,20 @@ npm run report
 
 Open [tests/landing-login.spec.js](tests/landing-login.spec.js).
 
+Connect each locator to the DOM clue we inspected in the lesson:
+
+| Element | Clue on the real page | Locator choice |
+| --- | --- | --- |
+| Landing heading | An `h1` with the full heading text | `getByRole('heading', ...)` |
+| Landing **Sign in** | An `a` tag with `href="/auth"` and the name **Sign in** | `getByRole('link', ...)` |
+| **Email** input | The label's `for="email"` matches the input's `id="email"` | `getByLabel('Email', ...)` |
+| **Password** input | The label's `for="password"` matches `id="password"` | `getByLabel('Password', ...)` |
+| Form **Sign in** | A `button` with `type="submit"` and the name **Sign in** | `getByRole('button', ...)` |
+
+Names such as `emailField` describe targets. `fill()` and `click()` perform actions;
+`expect(...)` checks the result. Read the two tests as these steps:
+
+
 - `page.goto(...)` opens the landing page.
 - `getByRole('heading', ...)` finds the actual landing heading.
 - `toHaveAttribute('href', '/auth')` checks the sign-in link's destination.
@@ -83,6 +97,10 @@ Open [tests/landing-login.spec.js](tests/landing-login.spec.js).
 - The **Sign in** button submits the form.
 - `toHaveURL(...)`, the **My account** heading, and the signed-in email check
   verify the successful result.
+
+The final login checks answer three questions: did we reach `/account`, is the
+**My account** heading visible, and does the signed-in identity contain our email?
+A completed click alone does not answer those questions.
 
 Playwright's web assertions wait for their expected conditions. No fixed sleep is needed.
 This practice app briefly shows the form before attaching its input handlers, so the

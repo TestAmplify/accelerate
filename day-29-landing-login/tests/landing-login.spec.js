@@ -1,12 +1,15 @@
 const { test, expect } = require('@playwright/test');
 
-test('landing page shows the heading and sign-in link', async ({ page }) => {
+test('landing page shows heading and Sign in link', async ({ page }) => {
   await page.goto('https://insurance.roadtoqa.com/');
-  await expect(page.getByRole('heading', {
+
+  const signIn = page.getByRole('link', { name: 'Sign in', exact: true });
+  const landingHeading = page.getByRole('heading', {
     name: 'Auto insurance, priced in the open', exact: true,
-  })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Sign in', exact: true }))
-    .toHaveAttribute('href', '/auth');
+  });
+  await expect(landingHeading).toBeVisible();
+  await expect(signIn).toBeVisible();
+  await expect(signIn).toHaveAttribute('href', '/auth');
 });
 
 test('student signs in and reaches My account', async ({ page }) => {
@@ -19,13 +22,20 @@ test('student signs in and reaches My account', async ({ page }) => {
   await page.goto('https://insurance.roadtoqa.com/');
   await page.getByRole('link', { name: 'Sign in', exact: true }).click();
   await page.waitForURL('https://insurance.roadtoqa.com/auth');
-  // This practice app attaches the form handlers after its first paint.
+  // This practice app needs its initial input handlers to finish loading.
   await page.waitForLoadState('networkidle');
-  await page.getByLabel('Email', { exact: true }).fill(email);
-  await page.getByLabel('Password', { exact: true }).fill(password);
-  await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+
+  const emailField = page.getByLabel('Email', { exact: true });
+  const passwordField = page.getByLabel('Password', { exact: true });
+  await emailField.fill(email);
+  await passwordField.fill(password);
+
+  const signInButton = page.getByRole('button', { name: 'Sign in', exact: true });
+  await signInButton.click();
+
   await expect(page).toHaveURL('https://insurance.roadtoqa.com/account');
-  await expect(page.getByRole('heading', { name: 'My account', exact: true }))
-    .toBeVisible();
-  await expect(page.getByText(/Signed in as/)).toContainText(email);
+  const accountHeading = page.getByRole('heading', { name: 'My account', exact: true });
+  await expect(accountHeading).toBeVisible();
+  const signedInIdentity = page.getByText(/Signed in as/);
+  await expect(signedInIdentity).toContainText(email);
 });
