@@ -24,6 +24,7 @@ Click your day. Read its instructions, then open the file you need.
 | [Day 27](day-27-introducing-playwright/) | Introducing Playwright | Setup, two first tests, browser commands, report, and a debugging exercise |
 | [Day 28](day-28-locators-and-selectors/) | Locators and Selectors | Real Meridian examples: role, text, placeholder, CSS, XPath, and a locator debugging exercise |
 | [Day 29](day-29-landing-login/) | Landing Page and Login Tests with Meridian | Two tests: landing-page checks, student login, and the real My account destination |
+| [Day 30](day-30-navigation-assertions/) | Navigation and Assertions | One Meridian journey: title, URL, heading, history, rating controls, and a count-failure trace exercise |
 
 **First quick example:** [Day 20 · 01-test-data.js](day-20-variables/01-test-data.js).
 
@@ -32,7 +33,7 @@ Click your day. Read its instructions, then open the file you need.
 - Days 20–23 and Day 26 run one JavaScript file at a time with Node.js. Each file includes its own variables.
 - Day 19 opens in your browser. Keep its HTML and CSS files together.
 - Days 24 and 25 also open in your browser. Keep each day's HTML, CSS, and JavaScript together; open its HTML file, not its JavaScript file.
-- Days 16, 27, 28, and 29 use Playwright and have their own setup instructions.
+- Days 16, 27, 28, 29, and 30 use Playwright and have their own setup instructions.
 - Days 17 and 18 include commands to enter in the terminal, one line at a time.
 
 You can read and copy from this public repository without a GitHub account.
@@ -41,7 +42,7 @@ Save your changes in your own practice folder.
 
 Some recordings show earlier course numbers or filenames, such as
 `day5-variables.js`, `day6-operators.js`, `day7-loops-functions.js`, and
-`day8-arrays-objects.js`. Here, the folders follow the current Day 16–29 schedule.
+`day8-arrays-objects.js`. Here, the folders follow the current Day 16–30 schedule.
 The combined Node.js demonstrations are split into small, independent files.
 The browser lessons use the current names `day24-dom-manipulation.js` and
 `day25-events.js`. Use the filenames and instructions written in this repository.
