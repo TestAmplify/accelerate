@@ -29,6 +29,7 @@ Click your day. Read its instructions, then open the file you need.
 | [Day 32](day-32-waits-timeouts/) | Waits and Timeouts | Readiness, auto-waiting, assertion limits, and a missing-Continue trace exercise |
 | [Day 33](day-33-screenshots-videos/) | Screenshots and Videos | Save and attach a screenshot; compare failure screenshot, video and trace; repair and rerun |
 | [Day 34](day-34-page-object-model/) | Page Object Model | Four-object design, one working LoginPage and two future journey outlines |
+| [Day 35](day-35-pom-framework/) | Page Object Model Framework | Four page objects, independent policy and quote tests, fixtures, and failure evidence |
 | [Day 36](day-36-data-driven-testing-and-files/) | Data-Driven Testing and Files with GitHub Copilot | Meridian driver data, Heroku file upload, Meridian PDF download, and an optional Copilot review |
 
 **First quick example:** [Day 20 · 01-test-data.js](day-20-variables/01-test-data.js).

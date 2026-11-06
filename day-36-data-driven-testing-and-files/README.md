@@ -49,11 +49,23 @@ without Copilot. If you want to try it, follow the
 Eligible personal GitHub accounts can try Copilot Free within its monthly allowance.
 A paid plan is optional.
 
-1. Open [the prompt](copilot-prompt.md) and [the review notes](review-notes.md).
-2. Review [the one-row diff](proposed-change.diff). In your practice copy,
-   add its `younger-same-experience` row to the JSON array. Keep the existing
-   three rows, fixture, page object, and assertions.
-3. List the tests, run the new case by name, and rerun the full spec.
+1. In VS Code, open the Chat menu in the title bar and select **Open Chat**.
+   Start a new chat, then choose **Ask** in the mode picker. The
+   [VS Code Chat guide](https://code.visualstudio.com/docs/agents/run/chat-view)
+   shows where to find the controls.
+2. Copy [the lesson prompt](copilot-prompt.md) into Chat and select **Send**.
+   It contains only fictional examples. Share only the course files needed
+   for the exercise and keep credentials out of Chat.
+3. Read the answer before editing anything. Check that the ID is unique,
+   the two values are strings, and years licensed stays at ten. Compare
+   the suggested age with the existing cases and review what still needs
+   to be proved in Meridian. Copilot can return a different suggestion.
+   The recording shows an initial age-26 suggestion, then an optional
+   follow-up about age 25. See the review notes for the follow-up prompt.
+4. Use [the review notes](review-notes.md) and [the one-row diff](proposed-change.diff)
+   to add the course's `younger-same-experience` row to your practice copy.
+   Keep the existing three rows, fixture, page object, and assertions.
+5. List the tests, run the new case by name, and rerun the full spec.
 
 ```bash
 npx playwright test driver-profiles.spec.js --list
