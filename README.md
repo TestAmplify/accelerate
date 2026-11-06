@@ -29,6 +29,7 @@ Click your day. Read its instructions, then open the file you need.
 | [Day 32](day-32-waits-timeouts/) | Waits and Timeouts | Readiness, auto-waiting, assertion limits, and a missing-Continue trace exercise |
 | [Day 33](day-33-screenshots-videos/) | Screenshots and Videos | Save and attach a screenshot; compare failure screenshot, video and trace; repair and rerun |
 | [Day 34](day-34-page-object-model/) | Page Object Model | Four-object design, one working LoginPage and two future journey outlines |
+| [Day 36](day-36-data-driven-testing-and-files/) | Data-Driven Testing and Files with GitHub Copilot | Meridian driver data, Heroku file upload, Meridian PDF download, and an optional Copilot review |
 
 **First quick example:** [Day 20 · 01-test-data.js](day-20-variables/01-test-data.js).
 
@@ -37,7 +38,7 @@ Click your day. Read its instructions, then open the file you need.
 - Days 20–23 and Day 26 run one JavaScript file at a time with Node.js. Each file includes its own variables.
 - Day 19 opens in your browser. Keep its HTML and CSS files together.
 - Days 24 and 25 also open in your browser. Keep each day's HTML, CSS, and JavaScript together; open its HTML file, not its JavaScript file.
-- Days 16, 27, 28, 29, 30, 31, 32, 33, and 34 use Playwright and have their own setup instructions.
+- Days 16, 27, 28, 29, 30, 31, 32, 33, 34, and 36 use Playwright and have their own setup instructions.
 - Days 17 and 18 include commands to enter in the terminal, one line at a time.
 
 You can read and copy from this public repository without a GitHub account.
@@ -46,7 +47,7 @@ Save your changes in your own practice folder.
 
 Some recordings show earlier course numbers or filenames, such as
 `day5-variables.js`, `day6-operators.js`, `day7-loops-functions.js`, and
-`day8-arrays-objects.js`. Here, the folders follow the current Day 16–34 schedule.
+`day8-arrays-objects.js`. Here, the folders follow the current course schedule.
 The combined Node.js demonstrations are split into small, independent files.
 The browser lessons use the current names `day24-dom-manipulation.js` and
 `day25-events.js`. Use the filenames and instructions written in this repository.
