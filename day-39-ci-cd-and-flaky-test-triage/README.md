@@ -40,6 +40,8 @@ LESSON_EXERCISE=timing npx playwright test
 
 The fixture delays Meridian's real rating-data response by 3 seconds on the initial attempt and uses normal delivery on a retry. Both delays are printed in the log. This is an intentionally staged classroom comparison of connection speeds. The application response body is preserved.
 
+The committed timing test uses the repaired visibility assertion. To reproduce the initial failure, copy the contents of `teaching/ratings-before.txt` into `timing/ratings.spec.js` in your practice copy.
+
 The initial teaching version pauses for 1 second and checks visibility immediately. Its first attempt fails and the normal-speed retry passes. Playwright labels that result flaky. `failOnFlakyTests: true` makes the job require attention despite that retry passing.
 
 Repair the timing test by replacing the fixed pause and immediate check with:
