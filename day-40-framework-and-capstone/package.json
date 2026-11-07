@@ -11,7 +11,7 @@
     "test:quote": "npm run clean && playwright test tests/quote-coverage.spec.js",
     "test:api": "npm run clean && playwright test tests/quotes-api.spec.js",
     "test:headed": "npm run clean && playwright test --headed",
-    "report:generate": "allure generate allure-results --output allure-report",
+    "report:generate": "allure generate allure-results --output allure-report --clean",
     "report:open": "allure open allure-report",
     "report:playwright": "playwright show-report"
   },
