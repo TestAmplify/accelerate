@@ -31,6 +31,8 @@ Click your day. Read its instructions, then open the file you need.
 | [Day 34](day-34-page-object-model/) | Page Object Model | Four-object design, one working LoginPage and two future journey outlines |
 | [Day 35](day-35-pom-framework/) | Page Object Model Framework | Four page objects, independent policy and quote tests, fixtures, and failure evidence |
 | [Day 36](day-36-data-driven-testing-and-files/) | Data-Driven Testing and Files with GitHub Copilot | Meridian driver data, Heroku file upload, Meridian PDF download, and an optional Copilot review |
+| [Day 37](day-37-alerts-healing-and-parallel-testing/) | Alerts, Iframes, Popups, Locator Repair and Parallel Testing | Heroku browser events, Meridian locator repair, Chrome/Edge/Firefox and worker comparisons |
+| [Day 38](day-38-api-tests-and-ai-maintenance/) | Structuring API Tests and AI Test Maintenance | One public Meridian GET test, response inspection and an optional Copilot repair review |
 
 **First quick example:** [Day 20 · 01-test-data.js](day-20-variables/01-test-data.js).
 
@@ -39,7 +41,7 @@ Click your day. Read its instructions, then open the file you need.
 - Days 20–23 and Day 26 run one JavaScript file at a time with Node.js. Each file includes its own variables.
 - Day 19 opens in your browser. Keep its HTML and CSS files together.
 - Days 24 and 25 also open in your browser. Keep each day's HTML, CSS, and JavaScript together; open its HTML file, not its JavaScript file.
-- Days 16, 27, 28, 29, 30, 31, 32, 33, 34, and 36 use Playwright and have their own setup instructions.
+- Days 16 and 27–38 use Playwright and have their own setup instructions.
 - Days 17 and 18 include commands to enter in the terminal, one line at a time.
 
 You can read and copy from this public repository without a GitHub account.
