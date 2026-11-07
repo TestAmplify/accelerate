@@ -58,7 +58,7 @@ LESSON_EXERCISE=timing npx playwright test --repeat-each=3
 
 ## Triage and review
 
-Read the failed step, expected and actual result, trace and relevant response. Consider a test mistake, timing or isolation issue, an application defect or an environment/setup problem. Keep uncertain diagnoses labelled as uncertain. An optional AI review should use sanitized evidence and propose one small repair. Review the diff and rerun the same assertion locally and in Actions.
+Read the failed step, expected and actual result, trace and relevant response. Consider a test mistake, timing or isolation issue, an application defect or an environment/setup problem. Keep uncertain diagnoses labelled as uncertain. For an optional Copilot review, use [the sanitized lesson prompt](teaching/triage-prompt.txt) and propose one small repair. Review the diff and rerun the same assertion locally and in Actions.
 
 CI runs automated checks on code changes. Passing checks can feed delivery or deployment workflows. This lesson demonstrates the testing stage using this student repository.
 
