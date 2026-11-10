@@ -35,6 +35,7 @@ Click your day. Read its instructions, then open the file you need.
 | [Day 38](day-38-api-tests-and-ai-maintenance/) | Structuring API Tests and AI Test Maintenance | One public Meridian GET test, response inspection and an optional Copilot repair review |
 | [Day 39](day-39-ci-cd-and-flaky-test-triage/) | CI/CD and Flaky Test Triage | Two Meridian smoke tests, one GitHub Actions workflow and a controlled timing repair |
 | [Day 40](day-40-framework-and-capstone/README.md) | Framework Architecture, Allure and Pillar 2 Capstone | Four page objects, three independent Meridian tests, Allure reports and GitHub Actions |
+| [Day 41](day-41-what-an-agent-actually-is/) | What an Agent Actually Is | Run the script, mock chatbot and agent examples and see why the agent stops on a 503 |
 
 **First quick example:** [Day 20 · 01-test-data.js](day-20-variables/01-test-data.js).
 
@@ -44,6 +45,7 @@ Click your day. Read its instructions, then open the file you need.
 - Day 19 opens in your browser. Keep its HTML and CSS files together.
 - Days 24 and 25 also open in your browser. Keep each day's HTML, CSS, and JavaScript together; open its HTML file, not its JavaScript file.
 - Days 16 and 27–40 use Playwright and have their own setup instructions.
+- Day 41 runs with Node.js and the three included JSON files.
 - Days 17 and 18 include commands to enter in the terminal, one line at a time.
 
 You can read and copy from this public repository without a GitHub account.
