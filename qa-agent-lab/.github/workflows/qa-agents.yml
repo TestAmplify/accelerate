@@ -1,0 +1,66 @@
+name: QA Agent Lab checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      live:
+        description: Make a real provider request using my private repository secrets
+        type: boolean
+        default: false
+      provider:
+        description: AI provider for the optional live run
+        type: choice
+        options: [anthropic, openai, deepseek]
+        default: anthropic
+permissions:
+  contents: read
+jobs:
+  classroom-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run build
+      - run: npm run evaluate
+      - run: npm run agent -- --agent workflow --example product
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scripted-classroom-evidence
+          path: artifacts/
+          if-no-files-found: ignore
+  manual-live-triage:
+    if: github.event_name == 'workflow_dispatch' && inputs.live
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - name: Inspect a fictional packet using my own API account
+        env:
+          AI_PROVIDER: ${{ inputs.provider }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+        run: npm run agent -- --agent triage --mode live --input examples/evidence-product.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: manual-live-triage-evidence
+          path: artifacts/
+          if-no-files-found: ignore

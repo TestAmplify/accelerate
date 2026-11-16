@@ -1,0 +1,55 @@
+{
+  "label": "Fictional Meridian training example",
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "A valid driver can continue to Vehicle details.",
+      "risk": "high"
+    },
+    {
+      "id": "R2",
+      "text": "An empty driver email prevents continuing and displays Email is required.",
+      "risk": "high"
+    },
+    {
+      "id": "R3",
+      "text": "An unbound saved quote can be retrieved using its quote reference.",
+      "risk": "medium"
+    }
+  ],
+  "failures": [
+    {
+      "id": "E1",
+      "text": "In a training browser observation, Email was empty. Continue opened Vehicle details without displaying Email is required. The expected guard did not prevent navigation."
+    }
+  ],
+  "observedSteps": [
+    {
+      "id": "S1",
+      "action": "Open the driver-details form in the training application."
+    },
+    {
+      "id": "S2",
+      "action": "Leave Email empty, fill the other required fields with fictional valid data, and select Continue."
+    }
+  ],
+  "tests": [
+    {
+      "id": "T1",
+      "title": "Valid driver can continue",
+      "assertions": [
+        {
+          "requirementId": "R1",
+          "text": "Vehicle details heading is visible after Continue with valid input."
+        }
+      ],
+      "runStatus": "not_run"
+    },
+    {
+      "id": "T2",
+      "title": "Driver input is retained",
+      "assertions": [],
+      "runStatus": "not_run"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "rtqa-qa-agent-lab",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "scripts": {
+    "start": "node scripts/start.mjs",
+    "dev": "node scripts/start.mjs",
+    "build": "next build --webpack",
+    "serve": "next start --hostname 127.0.0.1",
+    "test": "node --test tests/*.test.mjs",
+    "evaluate": "node --env-file-if-exists=.env.local scripts/evaluate.mjs",
+    "agent": "node --env-file-if-exists=.env.local scripts/run-agent.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.7"
+  }
+}

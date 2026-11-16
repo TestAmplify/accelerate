@@ -1,0 +1,46 @@
+{
+  "label": "Fictional incomplete evidence",
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "A valid driver can continue to Vehicle details.",
+      "risk": "high"
+    },
+    {
+      "id": "R2",
+      "text": "An empty driver email prevents continuing and displays Email is required.",
+      "risk": "high"
+    },
+    {
+      "id": "R3",
+      "text": "An unbound saved quote can be retrieved using its quote reference.",
+      "risk": "medium"
+    }
+  ],
+  "failures": [
+    {
+      "id": "E1",
+      "text": "A timeout occurred. No failing action, trace, response, recent change, or controlled repeat was supplied."
+    }
+  ],
+  "observedSteps": [],
+  "tests": [
+    {
+      "id": "T1",
+      "title": "Valid driver can continue",
+      "assertions": [
+        {
+          "requirementId": "R1",
+          "text": "Vehicle details heading is visible after Continue with valid input."
+        }
+      ],
+      "runStatus": "not_run"
+    },
+    {
+      "id": "T2",
+      "title": "Driver input is retained",
+      "assertions": [],
+      "runStatus": "not_run"
+    }
+  ]
+}

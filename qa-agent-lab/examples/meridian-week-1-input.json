@@ -1,0 +1,18 @@
+{
+  "label": "Week 1 Meridian quote flow",
+  "requirements": [
+    {
+      "id": "AC1",
+      "text": "Signed-in Home shows only Get a quote, Reviews, My policy & payments, email, and Customer badge.",
+      "risk": "high"
+    },
+    {
+      "id": "AC2",
+      "text": "In step 1, name, email, age, and years licensed enable Continue. The values stay visible.",
+      "risk": "medium"
+    }
+  ],
+  "failures": [],
+  "observedSteps": [],
+  "tests": []
+}

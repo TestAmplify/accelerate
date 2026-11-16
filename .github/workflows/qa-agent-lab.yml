@@ -1,0 +1,53 @@
+name: QA Agent Lab checks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'qa-agent-lab/**'
+      - 'day-42-your-first-qa-agent/**'
+      - 'day-43-giving-agents-tools/**'
+      - '.github/workflows/qa-agent-lab.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'qa-agent-lab/**'
+      - 'day-42-your-first-qa-agent/**'
+      - 'day-43-giving-agents-tools/**'
+      - '.github/workflows/qa-agent-lab.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  classroom-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: qa-agent-lab
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: qa-agent-lab/package-lock.json
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run build
+      - run: npm run evaluate
+      - name: Day 42 structured-response checkpoint
+        run: npm run agent -- --agent test-cases --example week-one-meridian --stage structured --output artifacts/day42-scripted.json
+      - name: Day 43 tool-investigation checkpoint
+        run: npm run agent -- --agent test-cases --example week-one-meridian --stage tools --output artifacts/day43-scripted.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qa-agent-classroom-evidence
+          path: qa-agent-lab/artifacts/
+          if-no-files-found: ignore

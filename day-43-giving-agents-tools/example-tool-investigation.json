@@ -1,0 +1,117 @@
+{
+  "mode": "scripted demo",
+  "note": "Real local file, HTTP and SQLite operations with fictional training evidence. Zero model calls. This is a recorded example, not a new execution on your computer.",
+  "budget": {
+    "calls": 0,
+    "tools": 3,
+    "inputTokens": 0,
+    "outputTokens": 0
+  },
+  "trace": [
+    {
+      "at": "2026-11-13T21:03:14.947Z",
+      "type": "start",
+      "agent": "test-cases",
+      "message": "Investigate with approved read-only tools."
+    },
+    {
+      "at": "2026-11-13T21:03:14.952Z",
+      "type": "tool",
+      "agent": "test-cases",
+      "name": "read_quote_criteria",
+      "args": {},
+      "result": {
+        "source": "Week 1 Meridian criteria file",
+        "requirements": [
+          {
+            "id": "AC1",
+            "text": "Signed-in Home shows only Get a quote, Reviews, My policy & payments, email, and Customer badge.",
+            "risk": "high"
+          },
+          {
+            "id": "AC2",
+            "text": "In step 1, name, email, age, and years licensed enable Continue. The values stay visible.",
+            "risk": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-13T21:03:14.969Z",
+      "type": "tool",
+      "agent": "test-cases",
+      "name": "get_quote_fields",
+      "args": {},
+      "result": {
+        "source": "Local Meridian training API",
+        "request": "GET /training/quote-step/1",
+        "status": 200,
+        "step": 1,
+        "fields": [
+          "name",
+          "email",
+          "age",
+          "years licensed"
+        ]
+      }
+    },
+    {
+      "at": "2026-11-13T21:03:14.985Z",
+      "type": "tool",
+      "agent": "test-cases",
+      "name": "query_quote_runs",
+      "args": {},
+      "result": {
+        "source": "Fictional SQLite practice runs",
+        "requirementId": "AC2",
+        "observations": [
+          {
+            "scenario": "all_fields_filled",
+            "observation": "Continue enabled and entered values stayed visible."
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-13T21:03:14.987Z",
+      "type": "validation",
+      "agent": "test-cases",
+      "message": "The scripted output passed schema and reference checks. Semantic correctness still needs review."
+    }
+  ],
+  "result": {
+    "summary": "Draft cases for the Week 1 Meridian quote flow. The supplied criterion describes the filled form.",
+    "evidenceIds": [
+      "AC1",
+      "AC2"
+    ],
+    "missingInformation": [
+      "Blank-field behavior still needs confirmation."
+    ],
+    "cases": [
+      {
+        "id": "TC-AC1",
+        "requirementId": "AC1",
+        "title": "Review the signed-in customer home",
+        "steps": [
+          "Sign in as a training customer.",
+          "Inspect Home and the customer identity."
+        ],
+        "expected": "Home shows Get a quote, Reviews, My policy & payments, the customer email and the Customer badge.",
+        "priority": "high"
+      },
+      {
+        "id": "TC-AC2",
+        "requirementId": "AC2",
+        "title": "Complete the four fields on quote step 1",
+        "steps": [
+          "Start a quote.",
+          "Fill name, email, age, and years licensed.",
+          "Inspect Continue and the entered values."
+        ],
+        "expected": "Continue becomes enabled and the four entered values stay visible.",
+        "priority": "medium"
+      }
+    ]
+  }
+}

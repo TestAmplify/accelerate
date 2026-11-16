@@ -1,0 +1,5 @@
+AC1
+Signed-in Home shows only Get a quote, Reviews, My policy & payments, email, and Customer badge.
+
+AC2
+In step 1, name, email, age, and years licensed enable Continue. The values stay visible.

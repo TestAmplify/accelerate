@@ -1,0 +1,121 @@
+{
+  "summary": "Draft test cases for the two supplied requirements (AC1, AC2) from the Week 1 Meridian quote flow evidence packet. No failures, observed steps, or existing tests were supplied, so expected results are derived only from the requirement text and no passed results are claimed. All cases are drafts for human review.",
+  "evidenceIds": [
+    "AC1",
+    "AC2"
+  ],
+  "missingInformation": [
+    "No UI element identifiers/locators or navigation path for reaching the signed-in Home screen are supplied.",
+    "No definition of 'Customer badge' visual properties or text is supplied.",
+    "No source of 'email' value (e.g., where the signed-in email is derived from) is supplied.",
+    "No exact labels/field order for step 1 (name, email, age, years licensed) are supplied.",
+    "No validation rules (ranges, formats, required-vs-optional) for age or years licensed are supplied.",
+    "No expected error/disabled behavior of Continue when fields are empty or invalid is supplied.",
+    "No test data (valid and invalid sets) is supplied.",
+    "No environment, browsers, or account setup for a signed-in session is supplied.",
+    "'My policy & payments' wording/grouping on the Home screen is ambiguous and unverified.",
+    "No evidence of prior observed steps or existing test cases to reuse or de-duplicate against."
+  ],
+  "cases": [
+    {
+      "id": "TC-AC1-001",
+      "requirementId": "AC1",
+      "title": "Signed-in Home displays exactly the five permitted elements",
+      "steps": [
+        "Sign in as a valid customer.",
+        "Navigate to the Home screen.",
+        "Enumerate all visible items/messages on the Home screen.",
+        "Compare visible items against: Get a quote, Reviews, My policy & payments, email, Customer badge."
+      ],
+      "expected": "Home shows only: Get a quote, Reviews, My policy & payments, the customer email, and the Customer badge; no additional items are displayed.",
+      "priority": "high"
+    },
+    {
+      "id": "TC-AC1-002",
+      "requirementId": "AC1",
+      "title": "Signed-in Home shows no extra/unsupported elements",
+      "steps": [
+        "Sign in as a valid customer.",
+        "Navigate to the Home screen.",
+        "Check for any element outside the permitted set (e.g., promotions, links, notices not listed in AC1)."
+      ],
+      "expected": "No elements beyond Get a quote, Reviews, My policy & payments, email, and Customer badge are present.",
+      "priority": "high"
+    },
+    {
+      "id": "TC-AC1-003",
+      "requirementId": "AC1",
+      "title": "Signed-in Home displays the correct customer email",
+      "steps": [
+        "Sign in with a known account whose email has an agreed test value.",
+        "Navigate to the Home screen.",
+        "Locate the email display and compare with the signed-in account email."
+      ],
+      "expected": "The email shown on Home matches the signed-in customer's email from the test account data.",
+      "priority": "high"
+    },
+    {
+      "id": "TC-AC1-004",
+      "requirementId": "AC1",
+      "title": "Customer badge is present for signed-in users",
+      "steps": [
+        "Sign in as a valid customer.",
+        "Navigate to the Home screen.",
+        "Confirm the Customer badge is visible."
+      ],
+      "expected": "Customer badge is displayed on Home for the signed-in user.",
+      "priority": "medium"
+    },
+    {
+      "id": "TC-AC2-001",
+      "requirementId": "AC2",
+      "title": "Continue enabled when all step 1 fields are completed",
+      "steps": [
+        "Sign in and start the quote flow.",
+        "On step 1, enter a name, a valid email, an age, and years licensed (using agreed test data).",
+        "Observe the state of the Continue control."
+      ],
+      "expected": "Continue becomes enabled once name, email, age, and years licensed are all provided.",
+      "priority": "high"
+    },
+    {
+      "id": "TC-AC2-002",
+      "requirementId": "AC2",
+      "title": "Continue remains disabled when required step 1 fields are missing",
+      "steps": [
+        "Sign in and start the quote flow.",
+        "On step 1, populate a subset of the four fields (name, email, age, years licensed), leaving at least one blank.",
+        "Observe the state of the Continue control.",
+        "Repeat for each field left blank individually."
+      ],
+      "expected": "Continue stays disabled while any of name, email, age, or years licensed is not provided.",
+      "priority": "high"
+    },
+    {
+      "id": "TC-AC2-003",
+      "requirementId": "AC2",
+      "title": "Entered step 1 values remain visible",
+      "steps": [
+        "Sign in and start the quote flow.",
+        "On step 1, enter name, email, age, and years licensed.",
+        "Confirm the entered values are still displayed in their fields.",
+        "Interact with the fields/form (e.g., tab between fields) and re-check visibility."
+      ],
+      "expected": "The entered name, email, age, and years licensed values stay visible after entry.",
+      "priority": "medium"
+    },
+    {
+      "id": "TC-AC2-004",
+      "requirementId": "AC2",
+      "title": "Step 1 values persist when proceeding with Continue",
+      "steps": [
+        "Sign in and start the quote flow.",
+        "On step 1, enter name, email, age, and years licensed.",
+        "Activate Continue.",
+        "Observe whether the previously entered step 1 values remain visible on step 1."
+      ],
+      "expected": "The values entered in step 1 remain visible (not cleared) consistent with AC2's visibility requirement.",
+      "priority": "low"
+    }
+  ]
+}
