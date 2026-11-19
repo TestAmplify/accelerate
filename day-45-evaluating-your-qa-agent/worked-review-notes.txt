@@ -1,0 +1,27 @@
+DAY 45 — INSTRUCTOR REVIEW NOTES
+
+Same Week 1 Meridian AC2.
+F1: Four filled fields enable Continue.
+F2: Entered values remain visible.
+
+Case reviews
+------------
+TC-AC2-001: SUPPORTED -> F1
+Reason: Filled fields enable Continue.
+
+TC-AC2-002: NEEDS CLARIFICATION
+Question: What happens when a field is blank?
+
+TC-AC2-003: SUPPORTED -> F2
+Reason: Values stay visible after entry.
+
+TC-AC2-004: NEEDS CLARIFICATION
+Question: What stays visible after Continue?
+
+SUPPORT PRECISION
+2 supported matches / 4 proposed checks
+= 2 / 4 = 50%
+
+REFERENCE RECALL
+2 reference checks covered / 2 reference checks
+= 2 / 2 = 100%

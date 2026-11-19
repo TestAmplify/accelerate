@@ -1,6 +1,6 @@
 # Day 45 teaching plan · Evaluate the same Meridian draft
 
-Status: planning only; no Day 45 recording in this update. Target video: 7–8 minutes. Required student practice: approximately 20 minutes, at the student's pace.
+Status: recorded and reviewed by the course owner. Lesson duration: 8 minutes 25 seconds. Required student practice: approximately 20 minutes, at the student's pace.
 
 ## Teaching outcome and workplace purpose
 
@@ -39,7 +39,7 @@ Count distinct mappings, with no extra credit for duplicate matches. Call these 
 
 If a student asks how recall could fall, use a ten-second hypothetical: a draft containing only the supported F1 check would have 1/1 precision and 1/2 recall. Clearly label it hypothetical; do not edit or replace the archived AI output.
 
-## Recording sequence for approval
+## Teaching sequence used for the recording
 
 | Time | Real screen / action | Explanation |
 |---|---|---|
@@ -73,4 +73,4 @@ Do not grade API purchases, Slack setup, output volume or copying 50%/100%. Grad
 - Keep the reference, archived draft and worked review separate; do not rewrite them to make an answer appear better.
 - Review the title opening, screen pacing, complete editor header and command/result framing before full production.
 
-No Day 45 video, new voice take, model run or portal publication is authorized by this planning step.
+The recorded lesson uses the approved Tony voice, real VS Code, the same archived Meridian draft and the local worked scoring command. Video delivery is through the course owner; this repository contains student source and teaching materials.

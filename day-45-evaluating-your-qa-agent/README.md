@@ -45,6 +45,10 @@ Read `candidateChecks: 4`, `agreedReferenceChecks: 2`, `truePositives: 2`, `fals
 
 Use `week9:evaluate -- --example`, not `npm run evaluate`, which belongs to the separate Week 10 triage exercise.
 
+## Worked review from the lesson
+
+The recorded lesson compares each case with the reference in real VS Code and runs the local scoring command. After making your own decisions, compare them with the [instructor review notes](worked-review-notes.txt). These notes explain the two supported mappings, the two clarification questions and both fractions. They are worked teaching notes, not a new AI response.
+
 ## Submit
 
 - Your four review decisions with reasons and reference mappings.
