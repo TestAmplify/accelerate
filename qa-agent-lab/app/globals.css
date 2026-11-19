@@ -940,3 +940,10 @@ footer p span {
     align-items: stretch;
   }
 }
+
+.week9-guide { display: grid; gap: 24px; }
+.week9-days { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+.week9-guide .card { min-width: 0; }
+.optional-specialists, .optional-provider { margin: 16px 0; }
+.optional-specialists summary, .optional-provider summary { cursor: pointer; color: var(--wine); font-weight: 600; padding: 10px 0; }
+.optional-specialists .agent-choice { margin-top: 12px; }

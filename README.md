@@ -38,6 +38,10 @@ Click your day. Read its instructions, then open the file you need.
 | [Day 41](day-41-what-an-agent-actually-is/) | What an Agent Actually Is | Run the script, mock chatbot and agent examples and see why the agent stops on a 503 |
 | [Day 42](day-42-your-first-qa-agent/) | Your First QA Agent | Paste the Week 1 Meridian criteria, review structured JSON and question the blank-field assumption |
 | [Day 43](day-43-giving-agents-tools/) | Giving Agents Tools | Follow real local file, HTTP and SQLite tools and inspect the evidence trace |
+| [Day 44](day-44-human-in-the-loop/) | Human in the Loop | Local rejection, fresh approval, reasons and the saved JSON; Slack optional |
+| [Day 45](day-45-evaluating-your-qa-agent/) | Evaluate Your QA Agent Draft | Review four Meridian cases against two reference checks; calculate precision and recall locally |
+
+**Starting Week 9?** Read [Week 9 start here](week-9-start-here/). All required exercises run locally without a paid API or Slack.
 
 **First quick example:** [Day 20 · 01-test-data.js](day-20-variables/01-test-data.js).
 
@@ -48,7 +52,7 @@ Click your day. Read its instructions, then open the file you need.
 - Days 24 and 25 also open in your browser. Keep each day's HTML, CSS, and JavaScript together; open its HTML file, not its JavaScript file.
 - Days 16 and 27–40 use Playwright and have their own setup instructions.
 - Day 41 runs with Node.js and the three included JSON files.
-- Days 42 and 43 use the shared [QA Agent Lab](qa-agent-lab/). Open that app folder in VS Code and follow its setup guide; scripted mode works without an API key.
+- Days 42–45 use the shared [QA Agent Lab](qa-agent-lab/). Open that app folder in VS Code and follow its setup guide; scripted mode works without an API key.
 - Days 17 and 18 include commands to enter in the terminal, one line at a time.
 
 You can read and copy from this public repository without a GitHub account.

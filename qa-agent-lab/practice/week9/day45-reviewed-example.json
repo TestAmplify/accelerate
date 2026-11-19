@@ -1,0 +1,29 @@
+{
+  "kind": "worked_reviewer_decisions",
+  "reviews": [
+    {
+      "caseId": "TC-AC2-001",
+      "referenceId": "F1",
+      "verdict": "supported",
+      "reason": "AC2 states that the four entered fields enable Continue."
+    },
+    {
+      "caseId": "TC-AC2-002",
+      "referenceId": null,
+      "verdict": "needs_clarification",
+      "reason": "AC2 does not state the expected behavior for a missing field."
+    },
+    {
+      "caseId": "TC-AC2-003",
+      "referenceId": "F2",
+      "verdict": "supported",
+      "reason": "AC2 states that entered values stay visible."
+    },
+    {
+      "caseId": "TC-AC2-004",
+      "referenceId": null,
+      "verdict": "needs_clarification",
+      "reason": "AC2 does not describe visibility after activating Continue or changing steps."
+    }
+  ]
+}

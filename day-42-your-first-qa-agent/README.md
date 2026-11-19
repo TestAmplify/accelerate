@@ -1,5 +1,7 @@
 # Day 42 · Your First QA Agent
 
+**Week 9 required path:** Start with the [student orientation](../week-9-start-here/) and [account-free exercise guide](../qa-agent-lab/docs/week9-exercises.md). Live API setup and Slack are optional.
+
 Turn the Week 1 Meridian quote criteria into a structured JSON draft. Read each expected result and check what supports it. This is the structured-response checkpoint: one live model request, before we add tools on Day 43.
 
 ## Open the shared app
@@ -37,7 +39,7 @@ You can learn by watching. A live provider run uses your own account allowance a
 
 ## Read the JSON together
 
-Open the [recorded DeepSeek draft](example-deepseek-draft.json). It came from the lesson's verified live run. It is AI-generated practice material, not the hand-written cases we will use for Day 45.
+Open the [recorded DeepSeek draft](example-deepseek-draft.json). It came from the lesson's verified live run. It is AI-generated practice material, separate from the course reference derived from AC2 for Day 45.
 
 | Field | What to check |
 | --- | --- |

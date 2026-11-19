@@ -1,11 +1,13 @@
 "use client";
 import { Fragment, useEffect, useState } from "react";
+import WeekNine from "./week-nine.js";
 import { providerCatalog } from "../lib/provider-catalog.mjs";
 import { agents, learningSteps } from "../lib/catalog.mjs";
 import { examples } from "../lib/examples-client.js";
 
 const pretty = (v) => JSON.stringify(v, null, 2);
 const words = (s) => s.replaceAll("_", " ");
+const weekOnePacket = examples.find(e => e.id === "week-one-meridian").packet;
 function download(name, data) {
   const url = URL.createObjectURL(
     new Blob([pretty(data)], { type: "application/json" }),
@@ -232,12 +234,12 @@ function Result({ run }) {
 }
 
 export default function Lab() {
-  const [page, setPage] = useState("agents"),
+  const [page, setPage] = useState("orientation"),
     [agent, setAgent] = useState("test-cases"),
     [mode, setMode] = useState("demo"),
-    [stage, setStage] = useState("tools"),
-    [example, setExample] = useState("product"),
-    [input, setInput] = useState(pretty(examples[0].packet));
+    [stage, setStage] = useState("structured"),
+    [example, setExample] = useState("week-one-meridian"),
+    [input, setInput] = useState(pretty(weekOnePacket));
   const [status, setStatus] = useState(null),
     [run, setRun] = useState(null),
     [busy, setBusy] = useState(false),
@@ -256,6 +258,11 @@ export default function Lab() {
   const selected = agents.find((a) => a.id === agent);
   const chosenProvider = providerCatalog.find((p) => p.id === providerId);
   const chosenConfig = status?.providers?.find((p) => p.id === providerId);
+  function startWeekNine(checkpoint) {
+    setAgent("test-cases"); setMode("demo"); setStage(checkpoint);
+    chooseExample("week-one-meridian"); setSendSlack(false); setNotice("");
+    setPage("agents");
+  }
   async function refresh() {
     try {
       const s = await api("/api/status");
@@ -406,6 +413,7 @@ export default function Lab() {
       <nav className="top-nav" aria-label="Main navigation">
         <div>
           {[
+            ["orientation", "Week 9 start here"],
             ["agents", "Agent workspace"],
             ["review", "Review desk"],
             ["guide", "Learning guide"],
@@ -435,7 +443,9 @@ export default function Lab() {
           <div className="gold-rule" />
           <p className="eyebrow">Evidence first. Decisions you can inspect.</p>
           <h1>
-            {page === "agents" ? (
+            {page === "orientation" ? (
+              <>Use AI with care.<br /><em>Keep your QA judgment.</em></>
+            ) : page === "agents" ? (
               <>
                 Build QA agents.
                 <br />
@@ -456,7 +466,9 @@ export default function Lab() {
             )}
           </h1>
           <p className="lede">
-            {page === "agents"
+            {page === "orientation"
+              ? "One familiar Meridian story. Small exercises. No paid API or Slack account required."
+              : page === "agents"
               ? "Choose a specialist, supply evidence, and follow its investigation. Every result starts as a draft for human review."
               : page === "review"
                 ? "Review the exact artifact, record a reason, and approve or reject. Approval publishes only to this app’s training collection."
@@ -500,12 +512,13 @@ export default function Lab() {
             Follow the deployment guide. Local mode creates its own state file.
           </p>
         )}
+        {page === "orientation" && <WeekNine onStart={startWeekNine} />}
         {page === "agents" && (
           <div className="workspace">
             <aside>
               <p className="eyebrow">Choose a specialist</p>
               <div className="agent-list">
-                {agents.map((a) => (
+                {agents.filter(a => a.id === "test-cases").map((a) => (
                   <button
                     key={a.id}
                     disabled={busy}
@@ -524,6 +537,27 @@ export default function Lab() {
                     </span>
                   </button>
                 ))}
+                <details className="optional-specialists"><summary>Week 10 specialists (optional)</summary>
+                {agents.filter(a => a.id !== "test-cases").map((a) => (
+                  <button
+                    key={a.id}
+                    disabled={busy}
+                    aria-pressed={agent === a.id}
+                    className={`agent-choice ${agent === a.id ? "selected" : ""} ${a.id === "workflow" ? "workflow-choice" : ""}`}
+                    onClick={() => selectAgent(a.id)}
+                  >
+                    <span className="agent-index">{a.icon}</span>
+                    <span>
+                      <strong>{a.name}</strong>
+                      <small>{a.short}</small>
+                      <span className="day">
+                        Day {a.day}
+                        {a.id === "workflow" ? " · optional handoff" : ""}
+                      </span>
+                    </span>
+                  </button>
+                ))}
+                </details>
               </div>
               <details className="recent">
                 <summary>Recent runs ({history.runs.length})</summary>
@@ -622,6 +656,8 @@ export default function Lab() {
                     </select>
                   </div>
                 </div>
+                <details className="optional-provider" open={mode === "live"}>
+                  <summary>Optional live AI setup - not required for Week 9</summary>
                 <label htmlFor="provider">AI provider</label>
                 <select
                   id="provider"
@@ -645,6 +681,7 @@ export default function Lab() {
                     : `For live mode, set ${chosenProvider.keyEnv} and ${chosenProvider.modelEnv} privately.`}{" "}
                   · {chosenProvider.outputMode}
                 </p>
+                </details>
                 <p className="mode-note">
                   {mode === "demo"
                     ? "Prepared fictional examples exercise the runner and tools. No AI request is made."
@@ -827,7 +864,13 @@ export default function Lab() {
             <section className="card">
               <div className="row spread">
                 <h2>Review requests</h2>
-                <button className="button secondary" onClick={refresh}>
+                <button
+                  className="button secondary"
+                  onClick={() => {
+                    setNotice("");
+                    refresh();
+                  }}
+                >
                   Refresh status
                 </button>
               </div>
@@ -1073,6 +1116,7 @@ export default function Lab() {
             <div>
               <section className="card">
                 <p className="eyebrow">Local setup · Mac & Windows</p>
+                <p><strong>Week 9 required path:</strong> use Week 9 start here. No .env.local file, API key or Slack setup is required.</p>
                 <h2>Run your own instance.</h2>
                 <ol>
                   <li>
@@ -1080,7 +1124,7 @@ export default function Lab() {
                     VS Code.
                   </li>
                   <li>
-                    Open Terminal → New Terminal. Run <code>npm install</code>,
+                    Open Terminal → New Terminal. Run <code>npm ci</code>,
                     then <code>npm start</code>.
                   </li>
                   <li>
@@ -1088,7 +1132,7 @@ export default function Lab() {
                     a scripted example first.
                   </li>
                   <li>
-                    For live mode, copy <code>.env.example</code> to{" "}
+                    Optional live mode only: copy <code>.env.example</code> to{" "}
                     <code>.env.local</code> in the file explorer. Choose a
                     provider below and enter its key and an accessible model
                     privately. Configure only the provider you want to use.
@@ -1137,9 +1181,9 @@ export default function Lab() {
                   Actions example, Slack setup, and a Vercel deployment guide.
                 </p>
                 <p>
-                  Start with approved JSON evidence tools. API, database, and
-                  MCP adapters are extension exercises; they are not connected
-                  to Meridian or a database in this starter.
+                  The required Day 43 example runs a local training API and
+                  a fictional SQLite practice database. Company-system and MCP
+                  connections are optional extensions. No Meridian login is needed.
                 </p>
                 <p className="subtle">
                   See README.md and docs/ in your project. Browser execution

@@ -7,6 +7,9 @@ on:
       - 'qa-agent-lab/**'
       - 'day-42-your-first-qa-agent/**'
       - 'day-43-giving-agents-tools/**'
+      - 'day-44-human-in-the-loop/**'
+      - 'day-45-evaluating-your-qa-agent/**'
+      - 'week-9-start-here/**'
       - '.github/workflows/qa-agent-lab.yml'
   pull_request:
     branches: [main]
@@ -14,6 +17,9 @@ on:
       - 'qa-agent-lab/**'
       - 'day-42-your-first-qa-agent/**'
       - 'day-43-giving-agents-tools/**'
+      - 'day-44-human-in-the-loop/**'
+      - 'day-45-evaluating-your-qa-agent/**'
+      - 'week-9-start-here/**'
       - '.github/workflows/qa-agent-lab.yml'
   workflow_dispatch:
 
@@ -40,6 +46,10 @@ jobs:
       - run: npm run check
       - run: npm test
       - run: npm run build
+      - name: Required Week 9 practice without external accounts
+        run: npm run week9:check
+      - name: Day 45 worked Meridian comparison
+        run: npm run week9:evaluate -- --example
       - run: npm run evaluate
       - name: Day 42 structured-response checkpoint
         run: npm run agent -- --agent test-cases --example week-one-meridian --stage structured --output artifacts/day42-scripted.json

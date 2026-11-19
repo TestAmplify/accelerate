@@ -1,0 +1,10 @@
+{
+  "kind": "recorded_live_output",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "capturedAt": "2026-11-10T00:50:46.759Z",
+  "cases": 8,
+  "sha256": "14d30e8ef8e16050e0a8dfd59197fcefb395e28cd3af3629d124d0bd59e7c0de",
+  "source": "Retained Day 42 live run; matches published example-deepseek-draft.json.",
+  "limitations": "Archived response for review; not a new AI call, not executed tests, and not a manual reference set."
+}

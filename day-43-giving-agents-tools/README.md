@@ -1,5 +1,7 @@
 # Day 43 · Giving Agents Tools
 
+**Week 9 required path:** Start with the [student orientation](../week-9-start-here/) and [account-free exercise guide](../qa-agent-lab/docs/week9-exercises.md). Live API setup and Slack are optional.
+
 Continue the Week 1 Meridian example from [Day 42](../day-42-your-first-qa-agent/). Give the lab three read-only ways to collect evidence, then check what that evidence can and cannot tell us about the blank-field question.
 
 ## Run the same app
@@ -46,6 +48,6 @@ The trace is an inspectable record of tool requests and returned evidence. It is
 
 - Pick one tool result and explain the source and what it supports.
 - Find the unsupported question left in the draft.
-- Save your trace and the question you would ask. Keep the hand-written Week 1 cases separate for the later Day 45 comparison.
+- Save your trace and the question you would ask. Keep this draft separate from the course reference derived from AC2 for the later Day 45 comparison.
 
 Human approval and optional Slack delivery belong to Day 44. Neither is required to finish this lesson.

@@ -14,7 +14,9 @@
     "test": "node --test tests/*.test.mjs",
     "evaluate": "node --env-file-if-exists=.env.local scripts/evaluate.mjs",
     "agent": "node --env-file-if-exists=.env.local scripts/run-agent.mjs",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "week9:check": "node scripts/week9-check.mjs",
+    "week9:evaluate": "node scripts/week9-evaluate.mjs"
   },
   "dependencies": {
     "next": "16.4.6",

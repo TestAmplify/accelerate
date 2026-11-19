@@ -1,17 +1,5 @@
 # Verification record
 
-## Repository publication check · November 16, 2026
-
-The clean source copy used Node.js 24.20.0 and its committed lockfile. All 53 tests, the 35-file server/script syntax check, and the optimized production build passed locally. The Day 42 scripted command completed with zero model/tool calls; the Day 43 command completed with three actual local tool calls and zero model calls. The five-fixture scripted evaluation passed and checks wiring only.
-
-Dependency patches: Next.js 16.4.6 and Zod 4.6.7. The npm registry audit reported zero known vulnerabilities after the update. This is a point-in-time audit, not a security guarantee.
-
-The Day 42 lesson includes a retained result from the previously verified live DeepSeek structured run. It is labelled as a recorded AI draft, with its unsupported blank-field expectation called out for review. No new paid provider request was made during this publication check. The hand-written Week 1 evaluation cases are not included in these generated examples.
-
-The repository-level `.github/workflows/qa-agent-lab.yml` validates the app subfolder and both scripted checkpoints without API secrets. See the actual GitHub Actions run for its remote result. A source commit and a passing build do not establish a hosted app deployment. No deployment record was found in TestAmplify/accelerate during the check.
-
-## Earlier release verification
-
 Local verification: October 9–10, 2026 (America/Chicago), on macOS with Node.js 24. Version 1.1 adds Anthropic/OpenAI/DeepSeek selection.
 
 Passed:

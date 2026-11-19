@@ -10,7 +10,11 @@ if (major < 22 || (major === 22 && minor < 9)) {
   process.exit(1);
 }
 if (existsSync(".env.local")) process.loadEnvFile(".env.local");
-const port = process.env.PORT || "3000";
+const args = process.argv.slice(2);
+if (args.length && (args.length !== 2 || args[0] !== "--port")) {
+  console.error("Usage: npm start [-- --port 3001]"); process.exit(1);
+}
+const port = args[1] || process.env.PORT || "3000";
 if (!/^\d+$/.test(port) || Number(port) < 1024 || Number(port) > 65535) {
   console.error("PORT must be a number between 1024 and 65535.");
   process.exit(1);

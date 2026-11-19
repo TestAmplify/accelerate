@@ -58,8 +58,8 @@ export const learningSteps = [
   ],
   [
     "42",
-    "First API call",
-    "Choose Structured response to inspect one schema-validated result.",
+    "Review a draft",
+    "Use the prepared response and archived Day 42 AI draft. Live API setup is optional.",
   ],
   [
     "43",
@@ -69,12 +69,12 @@ export const learningSteps = [
   [
     "44",
     "Review an action",
-    "Request approval, inspect the exact artifact, then approve or reject.",
+    "Use the local Review desk: inspect, give a reason, reject once and approve a fresh draft. Slack is optional.",
   ],
   [
     "45",
     "Evaluate",
-    "Run the labeled fixture set and inspect precision, recall, and abstention.",
+    "Review four archived AC2 checks against the separate two-check course reference; calculate support precision and reference recall.",
   ],
   [
     "46-48",

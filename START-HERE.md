@@ -74,6 +74,10 @@ in separate folders because each has its own `style.css`.
 For Days 16 and 27, follow the Playwright setup in that day's instructions.
 A `.spec.js` Playwright test runs with `npx playwright test`, not `node`.
 
+## Week 9: use the whole lab folder
+
+For Days 42–45, download and extract the repository, then open `accelerate-main/qa-agent-lab` in VS Code. Do not copy the app into one JavaScript file. Follow [Week 9 start here](week-9-start-here/). The required exercises use no paid API, Slack account or private environment file.
+
 ## Something did not work
 
 | What you see | What to do |
